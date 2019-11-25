@@ -60,27 +60,13 @@ uint8_t HDC1080_start_measurement(float* temperature, uint8_t* humidity)
 
 	return 0;
 }
-//uint8_t HDC_Temp;
-//uint8_t HDC_Humi;
 void HDC1080DataShow(uint8_t *HDC_Temp, uint8_t *HDC_Humi)
 {
-//	uint8_t Te;
 	if(!HDC1080_start_measurement((float*)&temp,(uint8_t*)&humi)){
 		printf("当前环境温度   : %0.1f °C\r\n",temp);
 		printf("当前环境湿度   : %0.2d\r\n",humi);
 		*HDC_Temp = (uint8_t)temp;
 		*HDC_Humi = humi;
-	
-//		HDC_Temp[0] = Te>0? '1':'0';
-//		
-//		HDC_Temp[1] = Te/100    + '0';
-//		HDC_Temp[2] = Te%100/10 + '0';
-//		HDC_Temp[3] = Te%10     + '0';
-
-//		HDC_Humi[0] = humi>0? '1':'0';
-//		HDC_Humi[1] = humi/100    + '0';
-//		HDC_Humi[2] = humi%100/10 + '0';
-//		HDC_Humi[3] = humi%10     + '0';
-//		printf("T-:%s  H-:%s\r\n",HDC_Temp, HDC_Humi);		
 	}
 }
+
